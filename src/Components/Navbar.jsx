@@ -25,7 +25,7 @@ const Navbar = () => {
     <div className="py-3 px-10 flex justify-between bg-themeColor">
       <div className="flex gap-4 items-center">
         <img className="h-10" src={logo} alt="loading Logo" />
-        <p className="text-2xl font-semibold text-white">
+        <p className="text-2xl hidden md:block font-semibold text-white">
           <span className="text-primary">Doc</span> House
         </p>
       </div>

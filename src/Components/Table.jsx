@@ -1,3 +1,4 @@
+// ** import core package:
 import { useEffect, useState } from "react";
 import Axios from "../Utils/Axios";
 
@@ -35,14 +36,13 @@ const Table = () => {
               <th scope="col" className="px-6 py-3">
                 Date
               </th>
-              
             </tr>
           </thead>
-          <tbody >
+          <tbody>
             {appointments.map((appointment, idx) => (
               <tr className="bg-white border-b  " key={appointment._id}>
                 <th className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                  {idx+1}
+                  {idx + 1}
                 </th>
                 <th
                   scope="row"
@@ -66,18 +66,24 @@ const Table = () => {
                     <p className="text-[#344054] font-medium text-moon-14">
                       {appointment.service}
                     </p>
-                    
                   </div>
                 </td>
                 <td className="px-6 py-4">
                   <div>
                     <p className="text-[#344054] font-medium text-moon-14">
-                      {appointment.date}
+                      {new Date(appointment.date).toLocaleString("en-US", {
+                        year: "numeric",
+                        month: "numeric",
+                        day: "numeric",
+                        hour: "numeric",
+                        minute: "numeric",
+                        second: "numeric",
+                        hour12: true, // Use 12-hour format
+                      })}
                     </p>
-                    <p className="text-[#667185] text-moon-14">time</p>
+                    
                   </div>
                 </td>
-                
               </tr>
             ))}
           </tbody>

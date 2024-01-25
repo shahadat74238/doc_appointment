@@ -40,7 +40,7 @@ const Appointment = () => {
   return (
     <div className="">
       <Title title="Booking Appointment" />
-      <div className="w-3/4 mx-auto px-10 lg:px-20 py-10 mb-10 bg-white rounded-md">
+      <div className="md:w-3/4 mx-auto px-10 lg:px-20 py-10 mb-10 bg-white rounded-md">
         <form onSubmit={handleSubmit}>
           <div>
             <p className="text-[#475367] text-moon-14 font-medium mb-1">
@@ -60,7 +60,7 @@ const Appointment = () => {
               <option value="HealLink Services">HealLink Services</option>
             </select>
           </div>
-          <div className="mt-6 grid grid-cols-2 gap-5">
+          <div className="mt-6 grid  md:grid-cols-2 gap-5">
             <div>
               <p className="text-[#475367] text-moon-14 font-medium mb-1">
                 First Name
@@ -86,8 +86,8 @@ const Appointment = () => {
               />
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-5">
-            <div className="mt-5 w-full">
+          <div className="grid md:grid-cols-2 gap-5 mt-5">
+            <div className="w-full">
               <p className="text-[#475367] text-moon-14 font-medium">Date</p>
               <DatePicker
                 className="p-4 border !w-full rounded-md"
@@ -97,7 +97,7 @@ const Appointment = () => {
                 dateFormat="MMMM d, yyyy h:mm aa"
               />
             </div>
-            <div className="mt-5">
+            <div className="">
               <p className="text-[#475367] text-moon-14 font-medium">Email</p>
               <input
                 className="p-4 border w-full rounded-md"
