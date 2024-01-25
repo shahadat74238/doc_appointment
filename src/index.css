@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-primary {
+    @apply text-white bg-primary font-medium px-3 py-1 rounded-md border border-primary duration-500 cursor-pointer  hover:bg-transparent hover:text-primary 
+}
