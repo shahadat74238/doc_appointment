@@ -29,13 +29,14 @@ const Appointment = () => {
     const lastName = form.last_name.value;
     const email = form.email.value;
     const appointmentData = { firstName, service, lastName, email, date };
-
-    axios.post("api/v1/appointment", appointmentData);
-
+    
+    await axios.post("api/v1/appointment", appointmentData);
+    
     Swal.fire({
       title: "Successfully Booking Appointment!",
       icon: "success",
     });
+    form.reset();
   };
   return (
     <div className="">
