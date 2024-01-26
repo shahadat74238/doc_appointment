@@ -6,6 +6,7 @@ import MainLayout from "../Layout/MainLayout";
 import Home from "../Pages/Home";
 import Dashboard from "../Pages/Dashboard";
 import Appointment from "../Pages/Appointment";
+import PrivetRouter from "./PrivetRouter";
 
 const router = createBrowserRouter([
   {
@@ -22,9 +23,12 @@ const router = createBrowserRouter([
       },
       {
         path: "dashboard",
-        element: <Dashboard />,
+        element: (
+          <PrivetRouter>
+            <Dashboard />
+          </PrivetRouter>
+        ),
       },
-      
     ],
   },
 ]);
